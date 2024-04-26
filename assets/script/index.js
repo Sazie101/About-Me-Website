@@ -1,28 +1,6 @@
 'use strict';
 
-function onEvent(event, selector, callback) {
-    return selector.addEventListener(event, callback);
-}
-
-function selectById(selector, parent = document) {
-    return parent.getElementById(selector);
-}
-
-function select(selector, parent = document) {
-    return parent.querySelector(selector);
-}
-
-function selectAll(selector, parent = document) {
-    return [...parent.querySelectorAll(selector)];
-}
-
-function create(element, parent = document) {
-    return parent.createElement(element);
-}
-
-function print(...args) {
-    console.log(args.join(', '));
-}
+import { onEvent, select, selectById, selectAll, print } from "./utility.js";
 
 const menu = selectById('hamburger');
 const navbar = select('.menus');
