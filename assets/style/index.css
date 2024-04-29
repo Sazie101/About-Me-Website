@@ -102,7 +102,38 @@ main {
     min-height: calc(100vh - 120px);
 }
 
+.typing-effect-hello-world h2{
+    overflow: hidden;
+    animation:
+        typing 0.8s steps(11),
+        cursor .9s step-end infinite alternate;
+}
+
+.typing-effect-intro p{
+    overflow: hidden;
+    animation:
+        typing 0.9s steps(79),
+        cursor .9s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    0% {
+        border-color: tranparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
 .hero {
+    font-family: "Nanum Gothic Coding", "Poppins", "Nunito Sans", Arial, sans-serif;
     position: relative;
     overflow: hidden;
     height: 100vh;
@@ -211,6 +242,14 @@ h2 {
     font-size: 15px;
 }
 
+.pro img {
+    border-radius: 10px;
+}
+
+.pro:hover img {
+    border-radius: 0;
+}
+
 #scrollToTopBtn {
     display: none;
     position: fixed;
@@ -227,9 +266,7 @@ h2 {
 @keyframes anim {
     0% {
         scale: 1.01;
-
     }
-
     100% {
         scale: 1.00;
     }
